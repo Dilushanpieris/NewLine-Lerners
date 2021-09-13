@@ -1,0 +1,11 @@
+.jfx-text-field {
+-fx-prompt-text-fill: #ffffff;
+-fx-text-fill: #ffffff;
+}
+.jfx-password-field {
+-fx-prompt-text-fill: #ffffff;
+-fx-text-fill: #ffffff;
+}
+.jfx-combo-box{
+-fx-prompt-text-fill: #ffffff;
+}
