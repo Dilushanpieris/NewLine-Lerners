@@ -7,6 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
@@ -20,16 +21,19 @@ public class MainLoginFormController {
     public JFXButton BtnAdmin;
     public int loginActionNum=-1;
     public StackPane loginFormContext;
+    public Label lblRole;
 
     public void initialize(){
         btnUser.setDisable(true);
         loginActionNum=1;
     }
 
+
     public void UserLoginOnAction(ActionEvent actionEvent) {
         btnUser.setDisable(true);
         Btntchr.setDisable(false);
         BtnAdmin.setDisable(false);
+        lblRole.setText("USER");
         loginActionNum=1;
         UnameTxt.requestFocus();
     }
@@ -38,6 +42,7 @@ public class MainLoginFormController {
         Btntchr.setDisable(true);
         btnUser.setDisable(false);
         BtnAdmin.setDisable(false);
+        lblRole.setText("TEACHER");
         loginActionNum=2;
         UnameTxt.requestFocus();
     }
@@ -46,6 +51,7 @@ public class MainLoginFormController {
         BtnAdmin.setDisable(true);
         Btntchr.setDisable(false);
         btnUser.setDisable(false);
+        lblRole.setText("ADMIN");
         loginActionNum=3;
         UnameTxt.requestFocus();
     }
