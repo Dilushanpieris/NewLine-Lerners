@@ -51,21 +51,21 @@ public class MainLoginFormController {
     }
 
     public void LoginOnAction(ActionEvent actionEvent) throws IOException {
-        if(loginActionNum==1){
+        if(loginActionNum==1){//User
             Parent load = FXMLLoader.load(getClass().getResource("../View/UserDashForm.fxml"));
             Scene scene = new Scene(load);
             Stage stage = new Stage();
             stage.setScene(scene);
             stage.show();
         }
-        if(loginActionNum==2){
+        if(loginActionNum==2){//Teacher
             Parent load = FXMLLoader.load(getClass().getResource(""));
             Scene scene = new Scene(load);
             Stage stage = new Stage();
             stage.setScene(scene);
             stage.show();
         }
-        if(loginActionNum==3){
+        if(loginActionNum==3){//Admin
             Parent load = FXMLLoader.load(getClass().getResource(""));
             Scene scene = new Scene(load);
             Stage stage = new Stage();
