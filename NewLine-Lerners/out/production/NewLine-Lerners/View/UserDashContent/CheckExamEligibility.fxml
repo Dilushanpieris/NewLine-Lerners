@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="checkEligibilityContext" prefHeight="579.0" prefWidth="738.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CheckExamEligibilityController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="579.0" stroke="BLACK" strokeType="INSIDE" width="738.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#1a2a6c" />
+                  <Stop color="#b21f1f" offset="0.4996447854504121" />
+                  <Stop color="#ebc714" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label layoutX="14.0" layoutY="14.0" text="Cheeck Exam Eligibility" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="26.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="53.0" prefHeight="0.0" prefWidth="696.0" />
+      <JFXComboBox fx:id="cmbStdID" focusColor="WHITE" layoutX="14.0" layoutY="85.0" onAction="#cmbOnAction" prefHeight="31.0" prefWidth="366.0" promptText="Select Student ID" stylesheets="@../css/styles.css" unFocusColor="WHITE" />
+      <Label layoutX="14.0" layoutY="143.0" prefHeight="21.0" prefWidth="62.0" text="Name:" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="188.0" prefHeight="21.0" prefWidth="62.0" text="Age:" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="229.0" prefHeight="25.0" prefWidth="84.0" text="Telephone:" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="268.0" prefHeight="3.0" prefWidth="696.0" />
+      <Label fx:id="lblName" layoutX="106.0" layoutY="143.0" prefHeight="25.0" prefWidth="304.0" text="Name" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAge" layoutX="106.0" layoutY="188.0" prefHeight="25.0" prefWidth="304.0" text="Age" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTel" layoutX="106.0" layoutY="229.0" prefHeight="25.0" prefWidth="304.0" text="Tel." textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="288.0" prefHeight="25.0" prefWidth="124.0" text="Paper 01 Marks :" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="326.0" prefHeight="25.0" prefWidth="124.0" text="Paper 02 Marks :" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="462.0" layoutY="288.0" prefHeight="25.0" prefWidth="124.0" text="Paper 03 Marks :" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="462.0" layoutY="326.0" prefHeight="25.0" prefWidth="124.0" text="Paper 04 Marks :" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMarks1" layoutX="140.0" layoutY="288.0" prefHeight="25.0" prefWidth="124.0" text="Marks" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMarks2" layoutX="140.0" layoutY="326.0" prefHeight="25.0" prefWidth="124.0" text="Marks" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMarks3" layoutX="586.0" layoutY="288.0" prefHeight="25.0" prefWidth="124.0" text="Marks" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMarks4" layoutX="586.0" layoutY="326.0" prefHeight="25.0" prefWidth="124.0" text="Marks" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Group layoutX="249.0" layoutY="371.0">
+         <children>
+            <Label prefHeight="25.0" prefWidth="103.0" text="Total Marks : " textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTotal" layoutX="103.0" layoutY="1.0" prefHeight="25.0" prefWidth="124.0" text="Marks" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Group>
+      <Group layoutX="249.0" layoutY="406.0">
+         <children>
+            <Label prefHeight="25.0" prefWidth="123.0" text="Average Marks : " textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAverage" layoutX="123.0" prefHeight="25.0" prefWidth="124.0" text="Marks" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Group>
+      <Label layoutX="21.0" layoutY="463.0" text="Eligibility :" textFill="WHITE">
+         <font>
+            <Font name="Bauhaus 93" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblStatus" layoutX="154.0" layoutY="463.0" text="Eligible/Not For Exam" textFill="WHITE">
+         <font>
+            <Font name="Bauhaus 93" size="25.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7c7c7c" height="57.0" layoutY="522.0" opacity="0.62" stroke="#ffffff00" strokeType="INSIDE" width="738.0" />
+      <JFXButton buttonType="RAISED" layoutX="578.0" layoutY="535.0" onAction="#CloseOnAction" opacity="0.84" prefHeight="31.0" prefWidth="146.0" style="-fx-background-color: #95a5a6; -fx-background-radius: 15px;" text="Close" />
+   </children>
+</AnchorPane>
