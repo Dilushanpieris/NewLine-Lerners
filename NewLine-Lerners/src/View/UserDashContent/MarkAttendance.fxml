@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="MarkAttendanceContext" prefHeight="663.0" prefWidth="987.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MarkAttendanceController">
+   <children>
+      <AnchorPane layoutX="212.0" layoutY="59.0" prefHeight="545.0" prefWidth="685.0" style="-fx-background-color: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);;">
+         <children>
+            <JFXComboBox fx:id="cmbBoxStdId" layoutX="83.0" layoutY="44.0" onAction="#cmbStdIdOnAction" prefHeight="31.0" prefWidth="580.0" promptText="Select Student ID" />
+            <Label layoutX="83.0" layoutY="111.0" text="Name :">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblName" layoutX="149.0" layoutY="111.0" prefHeight="26.0" prefWidth="446.0" text="Name">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="83.0" layoutY="157.0" text="Address :">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="albAddress" layoutX="158.0" layoutY="157.0" prefHeight="26.0" prefWidth="446.0" text="Address">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="83.0" layoutY="202.0" text="Telephone :">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTele" layoutX="179.0" layoutY="202.0" prefHeight="26.0" prefWidth="446.0" text="Telephone">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnMarkAtt" buttonType="RAISED" layoutX="83.0" layoutY="419.0" onAction="#btnMarkAttOnAction" prefHeight="57.0" prefWidth="373.0" style="-fx-background-color: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);;" text="Mark Attendance" textFill="#403e3e" underline="true" />
+            <Label layoutX="84.0" layoutY="300.0" text="Marking Status :">
+               <font>
+                  <Font name="Berlin Sans FB" size="29.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblMarkingStats" layoutX="295.0" layoutY="300.0" text="Waiting">
+               <font>
+                  <Font name="Berlin Sans FB" size="29.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="532.0" layoutY="500.0" onAction="#btnClose" prefHeight="31.0" prefWidth="137.0" style="-fx-background-color: #95a5a6;" text="Close" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="16.0" layoutY="14.0" prefHeight="619.0" prefWidth="252.0" style="-fx-background-radius: 1em; -fx-background-color: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);;">
+         <children>
+            <JFXButton fx:id="btnLearningStu" buttonType="RAISED" layoutX="63.0" layoutY="115.0" onAction="#btnlerningStuOnAction" prefHeight="121.0" prefWidth="137.0" style="-fx-background-color: linear-gradient(to right, #4ca1af, #c4e0e5); -fx-border-color: transparent; -fx-border-width: 3px;" text="Lerning Student" />
+            <JFXButton fx:id="btnTrainingStu" buttonType="RAISED" layoutX="63.0" layoutY="361.0" onAction="#btnTrainingStuOnAction" prefHeight="121.0" prefWidth="137.0" style="-fx-background-color: linear-gradient(to right, #4ca1af, #c4e0e5); -fx-border-color: transparent; -fx-border-width: 3px;" text="Training Student" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

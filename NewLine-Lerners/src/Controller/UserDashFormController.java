@@ -9,7 +9,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.util.Duration;
 
 import java.io.IOException;
@@ -42,6 +44,7 @@ public class UserDashFormController {
         Parent load = FXMLLoader.load(getClass().getResource("../View/UserDashContent/RegisterNewStudent.fxml"));
         Scene scene = new Scene(load);
         Stage stage = new Stage();
+        stage.initStyle(StageStyle.TRANSPARENT);
         stage.setScene(scene);
         stage.show();
     }
@@ -50,6 +53,7 @@ public class UserDashFormController {
         Parent load = FXMLLoader.load(getClass().getResource("../View/UserDashContent/MarkPaymentForm.fxml"));
         Scene scene = new Scene(load);
         Stage stage = new Stage();
+        stage.initStyle(StageStyle.TRANSPARENT);
         stage.setScene(scene);
         stage.show();
     }
@@ -58,18 +62,39 @@ public class UserDashFormController {
         Parent load = FXMLLoader.load(getClass().getResource("../View/UserDashContent/CheckExamEligibility.fxml"));
         Scene scene = new Scene(load);
         Stage stage = new Stage();
+        stage.initStyle(StageStyle.TRANSPARENT);
         stage.setScene(scene);
         stage.show();
     }
 
-    public void btnAssignLerner(ActionEvent actionEvent) {
+    public void btnAssignLerner(ActionEvent actionEvent) throws IOException {
+        Parent load = FXMLLoader.load(getClass().getResource("../View/UserDashContent/AssignLernerForm.fxml"));
+        Scene scene = new Scene(load);
+        Stage stage = new Stage();
+        stage.initStyle(StageStyle.TRANSPARENT);
+        stage.setScene(scene);
+        stage.show();
     }
 
-    public void btnMarkAttendance(ActionEvent actionEvent) {
+    public void btnMarkAttendance(ActionEvent actionEvent) throws IOException {
+        userDashContext.getScene().getWindow().hide();
+        Parent load = FXMLLoader.load(getClass().getResource("../View/UserDashContent/MarkAttendance.fxml"));
+        Scene scene = new Scene(load);
+        Stage stage = new Stage();
+        stage.initStyle(StageStyle.TRANSPARENT);
+        stage.setScene(scene);
+        scene.setFill(Color.TRANSPARENT);
+        stage.show();
     }
 
-    public void btnLogut(ActionEvent actionEvent) {
-        Stage stage = (Stage) userDashContext.getScene().getWindow();
-        stage.close();
+    public void btnLogut(ActionEvent actionEvent) throws IOException {
+        userDashContext.getScene().getWindow().hide();
+        Parent load = FXMLLoader.load(getClass().getResource("../View/MainLogin.fxml"));
+        Scene scene = new Scene(load);
+        Stage stage = new Stage();
+        stage.initStyle(StageStyle.TRANSPARENT);
+        stage.setScene(scene);
+        scene.setFill(Color.TRANSPARENT);
+        stage.show();
     }
 }

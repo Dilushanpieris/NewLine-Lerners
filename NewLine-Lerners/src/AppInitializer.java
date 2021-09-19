@@ -2,7 +2,9 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
@@ -15,10 +17,12 @@ public class AppInitializer extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        URL resource = getClass().getResource("View/MainLoginForm.fxml");
+        URL resource = getClass().getResource("View/MainLogin.fxml");
         Parent load = FXMLLoader.load(resource);
         Scene scene = new Scene(load);
+        primaryStage.initStyle(StageStyle.TRANSPARENT);
         primaryStage.setScene(scene);
+        scene.setFill(Color.TRANSPARENT);
         primaryStage.setTitle("New Line Lerners");
         primaryStage.show();
 
