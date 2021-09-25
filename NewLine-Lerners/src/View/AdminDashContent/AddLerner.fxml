@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addLernerContext" prefHeight="517.0" prefWidth="796.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AddLernerController">
+   <children>
+      <AnchorPane layoutX="42.0" layoutY="54.0" prefHeight="435.0" prefWidth="712.0" style="-fx-background-color: white;">
+         <children>
+            <JFXComboBox fx:id="cmbBoxLernerType" layoutX="25.0" layoutY="57.0" prefHeight="31.0" prefWidth="392.0" promptText="Select Lerner Type" />
+            <JFXTextField fx:id="lblName" layoutX="25.0" layoutY="122.0" prefHeight="31.0" prefWidth="392.0" promptText="Name" />
+            <JFXTextField fx:id="lblAddress" layoutX="25.0" layoutY="187.0" prefHeight="31.0" prefWidth="392.0" promptText="Address" />
+            <JFXTextField fx:id="lblTel" layoutX="25.0" layoutY="257.0" prefHeight="31.0" prefWidth="392.0" promptText="Telephone" />
+            <JFXButton fx:id="btnAddLerner" buttonType="RAISED" layoutX="25.0" layoutY="320.0" onAction="#btnAddLernerOnAction" prefHeight="46.0" prefWidth="235.0" style="-fx-background-color: linear-gradient(to right, #16A085 0%, #F4D03F  51%, #16A085  100%);" text="Add Lerner" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0000002b" height="46.0" layoutY="389.0" stroke="#ffffff00" strokeType="INSIDE" width="712.0" />
+            <JFXButton layoutX="587.0" layoutY="397.0" onAction="#btnClose" prefHeight="31.0" prefWidth="108.0" style="-fx-background-color: #95a5a6;" text="Close" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="15.0" layoutY="14.0" prefHeight="79.0" prefWidth="766.0" style="-fx-background-radius: 1em; -fx-background-color: grey;">
+         <children>
+            <Label layoutX="38.0" layoutY="27.0" text="Add Lerner (Teacher/Instructor)" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

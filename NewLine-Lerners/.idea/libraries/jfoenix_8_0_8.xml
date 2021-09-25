@@ -3,6 +3,7 @@
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/Lib/jfoenix-8.0.8.jar!/" />
       <root url="jar://$PROJECT_DIR$/Lib/mysql-connector-java-8.0.25.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Lib/GNButton-1.1.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

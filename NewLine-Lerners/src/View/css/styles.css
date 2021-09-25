@@ -9,3 +9,7 @@
 .jfx-combo-box{
 -fx-prompt-text-fill: #ffffff;
 }
+
+.combo-box > .list-cell {
+-fx-text-fill: white;
+}

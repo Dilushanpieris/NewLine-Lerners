@@ -1,5 +1,6 @@
 package Controller;
 
+import Db.DbConnection;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
@@ -8,10 +9,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
 
 public class MainLoginController {
     public AnchorPane loginforncontext;
@@ -47,9 +51,25 @@ public class MainLoginController {
         }
         if(selected==2){
             //teacher
+            Parent load = FXMLLoader.load(getClass().getResource("../View/TeacherDash.fxml"));
+            Scene scene = new Scene(load);
+            Stage stage = new Stage();
+            stage.initStyle(StageStyle.TRANSPARENT);
+            stage.setScene(scene);
+            scene.setFill(Color.TRANSPARENT);
+            stage.show();
+            loginforncontext.getScene().getWindow().hide();
         }
         if(selected==3){
             //admin
+            Parent load = FXMLLoader.load(getClass().getResource("../View/AdminDash.fxml"));
+            Scene scene = new Scene(load);
+            Stage stage = new Stage();
+            stage.initStyle(StageStyle.TRANSPARENT);
+            stage.setScene(scene);
+            scene.setFill(Color.TRANSPARENT);
+            stage.show();
+            loginforncontext.getScene().getWindow().hide();
         }
     }
 

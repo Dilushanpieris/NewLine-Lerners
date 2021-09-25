@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gn.lab.GNButton?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AdminFormContext" prefHeight="507.0" prefWidth="1065.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AdminDashController">
+   <children>
+      <AnchorPane layoutX="149.0" layoutY="35.0" prefHeight="432.0" prefWidth="823.0" style="-fx-background-color: white;">
+         <children>
+            <VBox layoutX="50.0" prefHeight="432.0" prefWidth="774.0">
+               <children>
+                  <HBox prefHeight="180.0" prefWidth="774.0">
+                     <children>
+                        <GNButton buttonType="CENTRALIZE" onMouseReleased="#btnAddLernerOnAction" prefHeight="218.0" prefWidth="740.0" style="-fx-border-color: linear-gradient(to right, #085078 0%, #85D8CE  51%, #085078  100%); -fx-border-width: 3px;" text="Add Lerner" textFill="#7f7f7f">
+                           <font>
+                              <Font name="Berlin Sans FB" size="30.0" />
+                           </font>
+                           <transitionColor>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#2980b9" />
+                                    <Stop color="#6dd5fa" offset="0.5082409775504406" />
+                                    <Stop color="#0025fb" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </transitionColor>
+                        </GNButton>
+                        <GNButton buttonType="CENTRALIZE" onMouseReleased="#btnViewIncomeReportsOnAction" prefHeight="218.0" prefWidth="724.0" style="-fx-border-color: linear-gradient(to right, #085078 0%, #85D8CE  51%, #085078  100%) linear-gradient(to right, #085078 0%, #85D8CE  51%, #085078  100%); -fx-border-width: 3px;" text="View Income Reports" textFill="#7f7f7f">
+                           <transitionColor>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#2980b9" />
+                                    <Stop color="#6dd5fa" offset="0.5191105427678319" />
+                                    <Stop color="#0025fb" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </transitionColor>
+                           <font>
+                              <Font name="Berlin Sans FB" size="30.0" />
+                           </font>
+                        </GNButton>
+                     </children></HBox>
+                  <HBox prefHeight="180.0" prefWidth="774.0">
+                     <children>
+                        <GNButton buttonType="CENTRALIZE" onMouseReleased="#btnViewWithdrawReportsOnAction" prefHeight="215.0" prefWidth="740.0" style="-fx-border-color: linear-gradient(to right, #085078 0%, #85D8CE  51%, #085078  100%) linear-gradient(to right, #085078 0%, #85D8CE  51%, #085078  100%); -fx-border-width: 3px;" text="View Withdraw Reports" textFill="#7f7f7f">
+                           <font>
+                              <Font name="Berlin Sans FB" size="30.0" />
+                           </font>
+                           <transitionColor>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#2980b9" />
+                                    <Stop color="#6dd5fa" offset="0.5191105427678319" />
+                                    <Stop color="#0025fb" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </transitionColor>
+                        </GNButton>
+                        <GNButton buttonType="CENTRALIZE" onMouseReleased="#btnWithdrawOnAction" prefHeight="215.0" prefWidth="724.0" style="-fx-border-color: linear-gradient(to right, #085078 0%, #85D8CE  51%, #085078  100%); -fx-border-width: 3px;" text="Withdraw Income" textFill="#7f7f7f">
+                           <transitionColor>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#2980b9" />
+                                    <Stop color="#6dd5fa" offset="0.5191105427678319" />
+                                    <Stop color="#0025fb" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </transitionColor>
+                           <font>
+                              <Font name="Berlin Sans FB" size="30.0" />
+                           </font>
+                        </GNButton>
+                     </children></HBox>
+                  <AnchorPane prefHeight="72.0" prefWidth="774.0" style="-fx-border-color: linear-gradient(to right, #085078 0%, #85D8CE  51%, #085078  100%);">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00000026" height="72.0" layoutY="-2.0" stroke="#ffffff00" strokeType="INSIDE" width="774.0" />
+                        <JFXButton layoutX="622.0" layoutY="25.0" onAction="#btnClose" prefHeight="31.0" prefWidth="140.0" style="-fx-background-color: #95a5a6;" text="Logout" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-46.0" prefHeight="507.0" prefWidth="246.0" style="-fx-background-color: linear-gradient(to right, #141e30, #243b55)linear-gradient(to right, #141e30, #243b55); -fx-background-radius: 17px;">
+         <children>
+            <Label layoutX="65.0" layoutY="196.0" text="Welcome" textFill="#ffffffc3">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="65.0" layoutY="236.0" text="Admin" textFill="#ffffffb2">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

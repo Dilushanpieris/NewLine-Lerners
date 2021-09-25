@@ -29,43 +29,44 @@
          </font>
       </Label>
       <Separator layoutX="13.0" layoutY="53.0" prefHeight="3.0" prefWidth="667.0" />
-      <JFXComboBox fx:id="cmbStdID" focusColor="WHITE" layoutX="14.0" layoutY="82.0" onAction="#cmbStdIDOnAction" prefHeight="31.0" prefWidth="337.0" promptText="Select Student ID" stylesheets="@../css/styles.css" unFocusColor="WHITE" />
-      <Label layoutX="14.0" layoutY="144.0" prefHeight="21.0" prefWidth="62.0" text="Name:" textFill="WHITE">
+      <JFXComboBox fx:id="cmbStdID" focusColor="WHITE" layoutX="14.0" layoutY="90.0" onAction="#cmbStdIDOnAction" prefHeight="31.0" prefWidth="337.0" promptText="Select Student ID" stylesheets="@../css/styles.css" unFocusColor="WHITE" />
+      <Label layoutX="13.0" layoutY="184.0" prefHeight="21.0" prefWidth="62.0" text="Name:" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="14.0" layoutY="189.0" prefHeight="21.0" prefWidth="62.0" text="Age:" textFill="WHITE">
+      <Label layoutX="13.0" layoutY="229.0" prefHeight="21.0" prefWidth="62.0" text="Age:" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="14.0" layoutY="230.0" prefHeight="25.0" prefWidth="84.0" text="Telephone:" textFill="WHITE">
+      <Label layoutX="13.0" layoutY="270.0" prefHeight="25.0" prefWidth="84.0" text="Telephone:" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="lblName" layoutX="106.0" layoutY="144.0" prefHeight="25.0" prefWidth="304.0" text="Name" textFill="WHITE">
+      <Label fx:id="lblName" layoutX="105.0" layoutY="184.0" prefHeight="25.0" prefWidth="304.0" text="Name" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="lblAge" layoutX="106.0" layoutY="189.0" prefHeight="25.0" prefWidth="304.0" text="Age" textFill="WHITE">
+      <Label fx:id="lblAge" layoutX="105.0" layoutY="229.0" prefHeight="25.0" prefWidth="304.0" text="Age" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="lblTel" layoutX="106.0" layoutY="230.0" prefHeight="25.0" prefWidth="304.0" text="Tel." textFill="WHITE">
+      <Label fx:id="lblTel" layoutX="105.0" layoutY="270.0" prefHeight="25.0" prefWidth="304.0" text="Tel." textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Separator layoutX="14.0" layoutY="266.0" prefHeight="3.0" prefWidth="660.0" />
-      <JFXComboBox fx:id="cmbLernerType" focusColor="WHITE" layoutX="14.0" layoutY="285.0" onAction="#cmbLernerTypeOnAction" prefHeight="31.0" prefWidth="337.0" promptText="Select Lerner Type." stylesheets="@../css/styles.css" unFocusColor="WHITE" />
+      <Separator layoutX="15.0" layoutY="308.0" prefHeight="3.0" prefWidth="660.0" />
       <JFXComboBox fx:id="cmbLerner01" focusColor="WHITE" layoutX="14.0" layoutY="336.0" prefHeight="31.0" prefWidth="337.0" promptText="Select Lerner 01" stylesheets="@../css/styles.css" unFocusColor="WHITE" />
       <JFXComboBox fx:id="cmbLerner02" focusColor="WHITE" layoutX="14.0" layoutY="388.0" prefHeight="31.0" prefWidth="337.0" promptText="Select Lerner 02" stylesheets="@../css/styles.css" unFocusColor="WHITE" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7a7b7c" height="50.0" layoutY="520.0" opacity="0.46" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="690.0" />
       <JFXButton buttonType="RAISED" layoutX="570.0" layoutY="528.0" onAction="#CloseOnAction" opacity="0.84" prefHeight="31.0" prefWidth="106.0" style="-fx-background-color: #95a5a6;" text="Close" textFill="WHITE" />
       <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="455.0" onAction="#AssignLernerOnActionBtn" opacity="0.66" prefHeight="42.0" prefWidth="337.0" style="-fx-background-color: #27ae60;" text="Assign Lerner" textFill="WHITE" />
+      <JFXComboBox fx:id="cmbExamStdID1" focusColor="WHITE" layoutX="14.0" layoutY="133.0" onAction="#cmbExamStdIDOnAction" prefHeight="31.0" prefWidth="337.0" promptText="Select Exam Written Student Student ID" stylesheets="@../css/styles.css" unFocusColor="WHITE" />
+      <JFXButton layoutX="503.0" layoutY="133.0" onAction="#clearSelectionOnAction" prefHeight="31.0" prefWidth="134.0" style="-fx-background-color: grey;" text="Clear Selection" />
    </children>
 </AnchorPane>
