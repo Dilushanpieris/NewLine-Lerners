@@ -39,8 +39,7 @@ public class MarkPaymentFormController {
     public void initialize(){
         ObservableList<String>obList= FXCollections.observableArrayList();
         try {
-            for (String temp:getAllStudentIds()
-                 ) {
+            for (String temp:getAllStudentIds()) {
                 obList.add(temp);
             }
         } catch (SQLException throwables) {
