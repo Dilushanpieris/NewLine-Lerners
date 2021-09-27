@@ -51,8 +51,18 @@ public class AdminDashController {
     }
 
     public void btnViewWithdrawReportsOnAction(MouseEvent mouseEvent) {
+
+
     }
 
-    public void btnWithdrawOnAction(MouseEvent mouseEvent) {
+    public void btnWithdrawOnAction(MouseEvent mouseEvent) throws IOException {
+        AdminFormContext.getScene().getWindow().hide();
+        Parent load = FXMLLoader.load(getClass().getResource("../View/AdminDashContent/WithdrawIncome.fxml"));
+        Scene scene = new Scene(load);
+        Stage stage = new Stage();
+        stage.initStyle(StageStyle.TRANSPARENT);
+        stage.setScene(scene);
+        scene.setFill(Color.TRANSPARENT);
+        stage.show();
     }
 }

@@ -73,7 +73,7 @@ DROP TABLE IF EXISTS Withdrawal_Data;
 CREATE TABLE IF NOT EXISTS Withdrawal_Data(
     With_ID VARCHAR(8),
     With_Date DATE,
-    With_Amount VARCHAR(10),
+    With_Amount DOUBLE(10),
     CONSTRAINT PRIMARY KEY(With_ID)
 );
 SHOW TABLES;
