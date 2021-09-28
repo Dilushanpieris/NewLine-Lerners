@@ -28,7 +28,7 @@ public class WithdrawIncomeController {
     public AnchorPane withdrawIncomeContext;
     public Label lblMaxAmount;
     public void initialize() throws SQLException, ClassNotFoundException {
-        lblMaxAmount.setText(String.valueOf(getSumofIncome()));
+        lblMaxAmount.setText(String.valueOf(getBalance()));
     }
 
     public void btnClose(ActionEvent actionEvent) throws IOException {
@@ -44,7 +44,7 @@ public class WithdrawIncomeController {
 
     public void btnWithdraw(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
         double amount= Double.parseDouble(txtWithdrawAmount.getText());
-        if(amount>getSumofIncome()){
+        if(amount>getBalance()){
             new Alert(Alert.AlertType.WARNING,"Requested Amount Is Invalid").show();
             return;
         }
@@ -64,17 +64,32 @@ public class WithdrawIncomeController {
         //if Tot> If
 
         //Add With Data.
-        Withdraw w1=new Withdraw(TempID,DateNow(),amount);
-        String query="INSERT INTO Withdrawal_Data VALUES(?,?,?)";
+        double balance=getBalance()-amount;
+        Withdraw w1=new Withdraw(TempID,DateNow(),amount,balance);
+        String query="INSERT INTO Withdrawal_Data VALUES(?,?,?,?)";
         PreparedStatement stm=con.prepareStatement(query);
         stm.setObject(1,w1.getWith_id());
         stm.setObject(2,w1.getWith_date());
         stm.setObject(3,w1.getWith_Amount());
+        stm.setObject(4,w1.getWith_balance());
         if(stm.executeUpdate()>0){
-            new Alert(Alert.AlertType.CONFIRMATION,"Successfully Added").showAndWait();
+            new Alert(Alert.AlertType.CONFIRMATION,"Withdrawal Data Added").showAndWait();
+            lblMaxAmount.setText(String.valueOf(getBalance()));
         }
         else{
             new Alert(Alert.AlertType.WARNING,"Try_Again").show();
+        }
+
+    }
+    public double getBalance() throws SQLException, ClassNotFoundException {
+        double balance;
+        Connection con= DbConnection.getInstance().getConnection();
+        ResultSet rst=con.prepareStatement("SELECT With_Balance FROM Withdrawal_Data WHERE With_Balance=(SELECT MIN(With_Balance) FROM Withdrawal_Data)").executeQuery();
+        if(rst.next()){
+            return rst.getDouble(1);
+        }
+        else{
+            return getSumofIncome();
         }
 
     }

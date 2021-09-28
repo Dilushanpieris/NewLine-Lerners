@@ -5,11 +5,17 @@ import com.jfoenix.controls.JFXComboBox;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -131,5 +137,15 @@ public class CheckExamEligibilityController {
             ids.add(rst.getString(1));
         }
         return ids;
+    }
+
+    public void openMarkAsExWritten(ActionEvent actionEvent) throws IOException {
+        checkEligibilityContext.getScene().getWindow().hide();
+        Parent load = FXMLLoader.load(getClass().getResource("../View/UserDashContent/MarkAsExWrittenStu.fxml"));
+        Scene scene = new Scene(load);
+        Stage stage = new Stage();
+        stage.initStyle(StageStyle.TRANSPARENT);
+        stage.setScene(scene);
+        stage.show();
     }
 }
