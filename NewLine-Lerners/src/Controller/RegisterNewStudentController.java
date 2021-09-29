@@ -2,10 +2,12 @@ package Controller;
 
 import Db.DbConnection;
 import Model.Student;
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
@@ -13,6 +15,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class RegisterNewStudentController {
     public JFXComboBox cmbVehType;
@@ -23,6 +27,7 @@ public class RegisterNewStudentController {
     public JFXTextField txtTelephone;
     public Rectangle RegNewStdCotext;
     public JFXComboBox cmbStdType;
+    public JFXButton btnsave;
 
     public void initialize(){
         cmbVehType.getItems().add("Auto");
@@ -109,5 +114,38 @@ public class RegisterNewStudentController {
     public void btnClose(ActionEvent actionEvent){
         Stage stage = (Stage) RegNewStdCotext.getScene().getWindow();
         stage.close();
+    }
+
+    public void NameValidation(KeyEvent keyEvent) {
+        String regEx="[A-z]";
+        Pattern compile = Pattern.compile(regEx);
+        boolean matches = compile.matcher(txtName.getText()).matches();
+        if(matches==true){
+            btnsave.setDisable(false);
+        }
+        else{
+            btnsave.setDisable(true);
+        }
+    }
+
+    public void AddressValidate(KeyEvent keyEvent) {
+    }
+
+    public void EmailValidate(KeyEvent keyEvent) {
+    }
+
+    public void AgeValidate(KeyEvent keyEvent) {
+        String regEx="[0-9]{2}";
+        Pattern compile = Pattern.compile(regEx);
+        boolean matches = compile.matcher(txtAge.getText()).matches();
+        if(matches==true){
+            btnsave.setDisable(false);
+        }
+        else{
+            btnsave.setDisable(true);
+        }
+    }
+
+    public void TelValidate(KeyEvent keyEvent) {
     }
 }

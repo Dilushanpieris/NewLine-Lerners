@@ -49,6 +49,6 @@
          </effect>
       </Rectangle>
       <JFXButton buttonType="RAISED" layoutX="729.0" layoutY="486.0" onAction="#CloseOnAction" opacity="0.82" prefHeight="31.0" prefWidth="135.0" style="-fx-background-color: #95a5a6;" text="Close To Main" textFill="WHITE" />
-      <JFXButton layoutX="27.0" layoutY="414.0" onAction="#MarkPaymentOnAction" opacity="0.82" prefHeight="48.0" prefWidth="352.0" style="-fx-background-color: #e67e22;" text="Mark Payment " textFill="WHITE" />
+      <JFXButton fx:id="btnMarkPayment" layoutX="27.0" layoutY="414.0" onAction="#MarkPaymentOnAction" opacity="0.82" prefHeight="48.0" prefWidth="352.0" style="-fx-background-color: #e67e22;" text="Mark Payment " textFill="WHITE" />
    </children>
 </AnchorPane>

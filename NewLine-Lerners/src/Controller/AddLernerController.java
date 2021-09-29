@@ -36,6 +36,10 @@ public class AddLernerController {
     }
 
     public void btnAddLernerOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
+        if(cmbBoxLernerType.getSelectionModel().isEmpty()|lblName.getText().isEmpty()|lblTel.getText().isEmpty()|lblAddress.getText().isEmpty()){
+            new Alert(Alert.AlertType.ERROR,"Add DAta To Continue").show();
+            return;
+        }
         if(cmbBoxLernerType.getValue()=="Teacher"){
             String TempID="";
             //Make Teacher ID As Acc

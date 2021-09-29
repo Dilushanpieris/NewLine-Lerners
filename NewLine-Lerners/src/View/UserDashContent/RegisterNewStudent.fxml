@@ -31,27 +31,27 @@
       </Label>
       <Separator layoutX="10.0" layoutY="44.0" prefHeight="2.0" prefWidth="412.0" />
       <JFXComboBox fx:id="cmbVehType" focusColor="WHITE" labelFloat="true" layoutX="10.0" layoutY="73.0" prefHeight="31.0" prefWidth="412.0" promptText="Select Vehicle Type" stylesheets="@../css/styles.css" unFocusColor="WHITE" />
-      <JFXTextField fx:id="txtName" focusColor="WHITE" labelFloat="true" layoutX="10.0" layoutY="214.0" prefHeight="31.0" prefWidth="412.0" promptText="Name" stylesheets="@../css/styles.css" unFocusColor="WHITE">
+      <JFXTextField fx:id="txtName" focusColor="WHITE" labelFloat="true" layoutX="10.0" layoutY="214.0" onKeyReleased="#NameValidation" prefHeight="31.0" prefWidth="412.0" promptText="Name" stylesheets="@../css/styles.css" unFocusColor="WHITE">
          <padding>
             <Insets top="9.0" />
          </padding></JFXTextField>
-      <JFXTextField fx:id="txtAddress" focusColor="WHITE" labelFloat="true" layoutX="10.0" layoutY="272.0" prefHeight="31.0" prefWidth="412.0" promptText="Address" stylesheets="@../css/styles.css" unFocusColor="WHITE">
+      <JFXTextField fx:id="txtAddress" focusColor="WHITE" labelFloat="true" layoutX="10.0" layoutY="272.0" onKeyReleased="#AddressValidate" prefHeight="31.0" prefWidth="412.0" promptText="Address" stylesheets="@../css/styles.css" unFocusColor="WHITE">
          <padding>
             <Insets top="9.0" />
          </padding></JFXTextField>
-      <JFXTextField fx:id="txtEmail" focusColor="WHITE" labelFloat="true" layoutX="10.0" layoutY="335.0" prefHeight="31.0" prefWidth="412.0" promptText="Email" stylesheets="@../css/styles.css" unFocusColor="WHITE">
+      <JFXTextField fx:id="txtEmail" focusColor="WHITE" labelFloat="true" layoutX="10.0" layoutY="335.0" onKeyReleased="#EmailValidate" prefHeight="31.0" prefWidth="412.0" promptText="Email" stylesheets="@../css/styles.css" unFocusColor="WHITE">
          <padding>
             <Insets top="9.0" />
          </padding></JFXTextField>
-      <JFXTextField fx:id="txtAge" focusColor="WHITE" labelFloat="true" layoutX="10.0" layoutY="398.0" prefHeight="31.0" prefWidth="412.0" promptText="Age" stylesheets="@../css/styles.css" unFocusColor="WHITE">
+      <JFXTextField fx:id="txtAge" focusColor="WHITE" labelFloat="true" layoutX="10.0" layoutY="398.0" onKeyReleased="#AgeValidate" prefHeight="31.0" prefWidth="412.0" promptText="Age" stylesheets="@../css/styles.css" unFocusColor="WHITE">
          <padding>
             <Insets top="9.0" />
          </padding></JFXTextField>
-      <JFXTextField fx:id="txtTelephone" focusColor="WHITE" labelFloat="true" layoutX="10.0" layoutY="461.0" prefHeight="31.0" prefWidth="412.0" promptText="Telephone" stylesheets="@../css/styles.css" unFocusColor="WHITE">
+      <JFXTextField fx:id="txtTelephone" focusColor="WHITE" labelFloat="true" layoutX="10.0" layoutY="461.0" onKeyReleased="#TelValidate" prefHeight="31.0" prefWidth="412.0" promptText="Telephone" stylesheets="@../css/styles.css" unFocusColor="WHITE">
          <padding>
             <Insets top="9.0" />
          </padding></JFXTextField>
-      <JFXButton buttonType="RAISED" layoutX="108.0" layoutY="531.0" onAction="#btnSaveOnAction" opacity="0.79" prefHeight="43.0" prefWidth="216.0" style="-fx-background-color: #2980b9;" text="Save Student" textFill="WHITE" />
+      <JFXButton fx:id="btnsave" buttonType="RAISED" layoutX="108.0" layoutY="531.0" onAction="#btnSaveOnAction" opacity="0.79" prefHeight="43.0" prefWidth="216.0" style="-fx-background-color: #2980b9;" text="Save Student" textFill="WHITE" />
       <JFXButton buttonType="RAISED" layoutX="304.0" layoutY="609.0" onAction="#btnClose" prefHeight="31.0" prefWidth="119.0" style="-fx-background-color: #e74c3c;" text="Close" textFill="WHITE" />
       <JFXComboBox fx:id="cmbStdType" focusColor="WHITE" labelFloat="true" layoutX="10.0" layoutY="137.0" prefHeight="31.0" prefWidth="412.0" promptText="Select Student Type" stylesheets="@../css/styles.css" unFocusColor="WHITE" />
    </children>

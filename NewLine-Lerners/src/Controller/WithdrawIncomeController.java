@@ -2,6 +2,7 @@ package Controller;
 
 import Db.DbConnection;
 import Model.Withdraw;
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -22,11 +23,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.regex.Pattern;
 
 public class WithdrawIncomeController {
     public JFXTextField txtWithdrawAmount;
     public AnchorPane withdrawIncomeContext;
     public Label lblMaxAmount;
+    public JFXButton btnWithdrawID;
+
     public void initialize() throws SQLException, ClassNotFoundException {
         lblMaxAmount.setText(String.valueOf(getBalance()));
     }
@@ -113,5 +117,14 @@ public class WithdrawIncomeController {
     }
 
     public void ValidateKey(KeyEvent keyEvent) {
+        String regEx="^[0-9]*(.[0-9]{2})$";
+        Pattern compile = Pattern.compile(regEx);
+        boolean matches = compile.matcher(txtWithdrawAmount.getText()).matches();
+        if(matches==true){
+            btnWithdrawID.setDisable(false);
+        }
+        else{
+            btnWithdrawID.setDisable(true);
+        }
     }
 }

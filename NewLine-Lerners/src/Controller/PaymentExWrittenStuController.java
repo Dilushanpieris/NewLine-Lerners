@@ -2,6 +2,7 @@ package Controller;
 
 import Db.DbConnection;
 import Model.Payment;
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
@@ -26,6 +27,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.regex.Pattern;
 
 public class PaymentExWrittenStuController {
     public JFXComboBox cmbStdID;
@@ -35,6 +37,7 @@ public class PaymentExWrittenStuController {
     public Label lblTelephone;
     public JFXTextField txtAmount;
     public AnchorPane ExamWrittenStuPaymentContext;
+    public JFXButton btnMarkPayment;
 
     public void initialize(){
         ObservableList<String> obList= FXCollections.observableArrayList();
@@ -69,6 +72,15 @@ public class PaymentExWrittenStuController {
     }
 
     public void AmountValidation(KeyEvent keyEvent) {
+        String regEx="^[0-9]*(.[0-9]{2})$";
+        Pattern compile = Pattern.compile(regEx);
+        boolean matches = compile.matcher(txtAmount.getText()).matches();
+        if(matches==true){
+            btnMarkPayment.setDisable(false);
+        }
+        else{
+            btnMarkPayment.setDisable(true);
+        }
     }
 
     public void MarkPaymentOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {

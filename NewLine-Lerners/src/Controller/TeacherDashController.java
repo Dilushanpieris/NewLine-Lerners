@@ -1,6 +1,7 @@
 package Controller;
 
 import Db.DbConnection;
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
@@ -11,6 +12,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -25,6 +27,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.regex.Pattern;
 
 public class TeacherDashController {
     public AnchorPane TeacherDashContext;
@@ -36,6 +39,8 @@ public class TeacherDashController {
     public JFXTextField lblEx02Marks;
     public JFXTextField lblEx03Marks;
     public JFXTextField lblEx04Marks;
+    public JFXButton btnAddMarksID;
+    public JFXButton btnUpmarksID;
 
 
     public void initialize() throws SQLException, ClassNotFoundException {
@@ -162,5 +167,62 @@ public class TeacherDashController {
         Date date=new Date();
         SimpleDateFormat f=new SimpleDateFormat("yyyy-MM-dd");
         return f.format(date);
+    }
+
+    public void ex01marksValidate(KeyEvent keyEvent) {
+        String regEx="^[0-9]{2}$";
+        Pattern compile = Pattern.compile(regEx);
+        boolean matches = compile.matcher(lblEx01Marks.getText()).matches();
+        if(matches==true){
+            btnAddMarksID.setDisable(false);
+            btnUpmarksID.setDisable(false);
+        }
+        else{
+            btnAddMarksID.setDisable(true);
+            btnUpmarksID.setDisable(true);
+        }
+    }
+
+    public void ex02marksValidate(KeyEvent keyEvent) {
+        String regEx="^[0-9]{2}$";
+        Pattern compile = Pattern.compile(regEx);
+        boolean matches = compile.matcher(lblEx02Marks.getText()).matches();
+        if(matches==true){
+            btnAddMarksID.setDisable(false);
+            btnUpmarksID.setDisable(false);
+        }
+        else{
+            btnAddMarksID.setDisable(true);
+            btnUpmarksID.setDisable(true);
+        }
+
+    }
+
+    public void ex03marksValidate(KeyEvent keyEvent) {
+        String regEx="^[0-9]{2}$";
+        Pattern compile = Pattern.compile(regEx);
+        boolean matches = compile.matcher(lblEx03Marks.getText()).matches();
+        if(matches==true){
+            btnAddMarksID.setDisable(false);
+            btnUpmarksID.setDisable(false);
+        }
+        else{
+            btnAddMarksID.setDisable(true);
+            btnUpmarksID.setDisable(true);
+        }
+    }
+
+    public void ex04marksValidate(KeyEvent keyEvent) {
+        String regEx="^[0-9]{2}$";
+        Pattern compile = Pattern.compile(regEx);
+        boolean matches = compile.matcher(lblEx04Marks.getText()).matches();
+        if(matches==true){
+            btnAddMarksID.setDisable(false);
+            btnUpmarksID.setDisable(false);
+        }
+        else{
+            btnAddMarksID.setDisable(true);
+            btnUpmarksID.setDisable(true);
+        }
     }
 }

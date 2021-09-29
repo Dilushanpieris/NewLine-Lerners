@@ -8,7 +8,6 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="TeacherDashContext" prefHeight="666.0" prefWidth="1121.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TeacherDashController">
    <children>
       <AnchorPane layoutX="137.0" layoutY="46.0" prefHeight="556.0" prefWidth="848.0" style="-fx-background-color: white;">
@@ -71,12 +70,12 @@
                   <Font name="Dubai Regular" size="19.0" />
                </font>
             </Label>
-            <JFXTextField fx:id="lblEx01Marks" layoutX="170.0" layoutY="322.0" promptText="Input marks (ex: 20)" unFocusColor="#2c1f1f" />
-            <JFXTextField fx:id="lblEx02Marks" focusColor="#2b3246" layoutX="170.0" layoutY="373.0" promptText="Input marks (ex: 20)" />
-            <JFXTextField fx:id="lblEx03Marks" layoutX="552.0" layoutY="322.0" promptText="Input marks (ex: 20)" unFocusColor="#2c1f1f" />
-            <JFXTextField fx:id="lblEx04Marks" layoutX="552.0" layoutY="373.0" promptText="Input marks (ex: 20)" unFocusColor="#2c1f1f" />
-            <JFXButton buttonType="RAISED" layoutX="51.0" layoutY="438.0" onAction="#btnAddNewMarks" opacity="0.88" prefHeight="51.0" prefWidth="285.0" style="-fx-background-color: #27ae60; -fx-background-radius: 1em;" text="Add New Marks" />
-            <JFXButton buttonType="RAISED" layoutX="436.0" layoutY="438.0" onAction="#btnUpdateMarks" opacity="0.88" prefHeight="51.0" prefWidth="285.0" style="-fx-background-color: #f1c40f; -fx-background-radius: 1em;" text="Update Marks" />
+            <JFXTextField fx:id="lblEx01Marks" layoutX="170.0" layoutY="322.0" onKeyReleased="#ex01marksValidate" promptText="Input marks (ex: 20)" unFocusColor="#2c1f1f" />
+            <JFXTextField fx:id="lblEx02Marks" focusColor="#2b3246" layoutX="170.0" layoutY="373.0" onKeyReleased="#ex02marksValidate" promptText="Input marks (ex: 20)" />
+            <JFXTextField fx:id="lblEx03Marks" layoutX="552.0" layoutY="322.0" onKeyReleased="#ex03marksValidate" promptText="Input marks (ex: 20)" unFocusColor="#2c1f1f" />
+            <JFXTextField fx:id="lblEx04Marks" layoutX="552.0" layoutY="373.0" onKeyReleased="#ex04marksValidate" promptText="Input marks (ex: 20)" unFocusColor="#2c1f1f" />
+            <JFXButton fx:id="btnAddMarksID" buttonType="RAISED" layoutX="51.0" layoutY="438.0" onAction="#btnAddNewMarks" opacity="0.88" prefHeight="51.0" prefWidth="285.0" style="-fx-background-color: #27ae60; -fx-background-radius: 1em;" text="Add New Marks" />
+            <JFXButton fx:id="btnUpmarksID" buttonType="RAISED" layoutX="436.0" layoutY="438.0" onAction="#btnUpdateMarks" opacity="0.88" prefHeight="51.0" prefWidth="285.0" style="-fx-background-color: #f1c40f; -fx-background-radius: 1em;" text="Update Marks" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="620.0" prefWidth="138.0" style="-fx-background-color: linear-gradient(to right,#61D8DE, #E839F6); -fx-background-radius: 1em;" />

@@ -13,7 +13,7 @@
          <children>
             <JFXButton layoutX="528.0" layoutY="403.0" onAction="#btnClose" prefHeight="31.0" prefWidth="111.0" style="-fx-background-color: #95a5a6;" text="Close" />
             <JFXTextField fx:id="txtWithdrawAmount" focusColor="BLACK" layoutX="54.0" layoutY="110.0" onKeyReleased="#ValidateKey" prefHeight="31.0" prefWidth="567.0" promptText="Enter Withdraw Amount Ex:2500.00" />
-            <JFXButton layoutX="169.0" layoutY="240.0" onAction="#btnWithdraw" prefHeight="53.0" prefWidth="337.0" style="-fx-background-color: #e67e22;" text="Withdraw" />
+            <JFXButton fx:id="btnWithdrawID" layoutX="169.0" layoutY="240.0" onAction="#btnWithdraw" prefHeight="53.0" prefWidth="337.0" style="-fx-background-color: #e67e22;" text="Withdraw" />
             <Label layoutX="54.0" layoutY="351.0" text="Max Withdrawable Amount :">
                <font>
                   <Font name="Berlin Sans FB" size="19.0" />
