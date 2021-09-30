@@ -35,8 +35,20 @@ public class RegisterNewStudentController {
         cmbStdType.getItems().add("New Student");
         cmbStdType.getItems().add("Exam Written Student");
     }
+    public boolean isempty(){
+        if(cmbStdType.getSelectionModel().isEmpty()&cmbVehType.getSelectionModel().isEmpty()&txtName.getText().isEmpty()&txtAge.getText().isEmpty()&txtTelephone.getText().isEmpty()&txtEmail.getText().isEmpty()&txtAddress.getText().isEmpty()){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 
     public void btnSaveOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
+        if(isempty()){
+            new Alert(Alert.AlertType.WARNING,"Incorrect Data").show();
+            return;
+        }
         if(cmbStdType.getValue().equals("New Student")){
             //get Lst ID
             String TempID="";

@@ -52,6 +52,7 @@ public class TeacherDashController {
     }
 
     public void cmbBoxStdIDOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
+        clearFields();
         Connection con=DbConnection.getInstance().getConnection();
         PreparedStatement stm=con.prepareStatement("SELECT * FROM Student WHERE St_ID=?");
         String selected= (String) cmbBoxStdID.getValue();
@@ -210,6 +211,12 @@ public class TeacherDashController {
             btnAddMarksID.setDisable(true);
             btnUpmarksID.setDisable(true);
         }
+    }
+    public void clearFields(){
+        lblEx01Marks.setText("");
+        lblEx02Marks.setText("");
+        lblEx03Marks.setText("");
+        lblEx04Marks.setText("");
     }
 
     public void ex04marksValidate(KeyEvent keyEvent) {

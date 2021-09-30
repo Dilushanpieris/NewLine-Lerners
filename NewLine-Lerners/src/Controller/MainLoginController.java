@@ -8,6 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -38,38 +39,57 @@ public class MainLoginController {
         Btntch.setStyle("-fx-background-color: #8e44ad;"+
                 "-fx-border-width:3px");
     }
+    public void clearFields(){
+        UnameTxt.setText("");
+        PassTxt.setText("");
+    }
 
     public void LoginOnAction(ActionEvent actionEvent) throws IOException {
         if(selected==1){
-            Parent load = FXMLLoader.load(getClass().getResource("../View/UserDashForm.fxml"));
-            Scene scene = new Scene(load);
-            Stage stage = new Stage();
-            stage.initStyle(StageStyle.TRANSPARENT);
-            stage.setScene(scene);
-            stage.show();
-            loginforncontext.getScene().getWindow().hide();
+            if(UnameTxt.getText().equals("User")&PassTxt.getText().equals("user123")) {
+                Parent load = FXMLLoader.load(getClass().getResource("../View/UserDashForm.fxml"));
+                Scene scene = new Scene(load);
+                Stage stage = new Stage();
+                stage.initStyle(StageStyle.TRANSPARENT);
+                stage.setScene(scene);
+                stage.show();
+                loginforncontext.getScene().getWindow().hide();
+            }
+            else{
+                new Alert(Alert.AlertType.WARNING,"Incorrect Username Or Password").show();
+            }
         }
         if(selected==2){
-            //teacher
-            Parent load = FXMLLoader.load(getClass().getResource("../View/TeacherDash.fxml"));
-            Scene scene = new Scene(load);
-            Stage stage = new Stage();
-            stage.initStyle(StageStyle.TRANSPARENT);
-            stage.setScene(scene);
-            scene.setFill(Color.TRANSPARENT);
-            stage.show();
-            loginforncontext.getScene().getWindow().hide();
+            if(UnameTxt.getText().equals("Teacher")&PassTxt.getText().equals("teacher123")) {
+                //teacher
+                Parent load = FXMLLoader.load(getClass().getResource("../View/TeacherDash.fxml"));
+                Scene scene = new Scene(load);
+                Stage stage = new Stage();
+                stage.initStyle(StageStyle.TRANSPARENT);
+                stage.setScene(scene);
+                scene.setFill(Color.TRANSPARENT);
+                stage.show();
+                loginforncontext.getScene().getWindow().hide();
+            }
+            else{
+                new Alert(Alert.AlertType.WARNING,"Incorrect Username Or Password").show();
+            }
         }
         if(selected==3){
-            //admin
-            Parent load = FXMLLoader.load(getClass().getResource("../View/AdminDash.fxml"));
-            Scene scene = new Scene(load);
-            Stage stage = new Stage();
-            stage.initStyle(StageStyle.TRANSPARENT);
-            stage.setScene(scene);
-            scene.setFill(Color.TRANSPARENT);
-            stage.show();
-            loginforncontext.getScene().getWindow().hide();
+            if(UnameTxt.getText().equals("Admin")&PassTxt.getText().equals("admin123")) {
+                //admin
+                Parent load = FXMLLoader.load(getClass().getResource("../View/AdminDash.fxml"));
+                Scene scene = new Scene(load);
+                Stage stage = new Stage();
+                stage.initStyle(StageStyle.TRANSPARENT);
+                stage.setScene(scene);
+                scene.setFill(Color.TRANSPARENT);
+                stage.show();
+                loginforncontext.getScene().getWindow().hide();
+            }
+            else{
+                new Alert(Alert.AlertType.WARNING,"Incorrect Username Or Password").show();
+            }
         }
     }
 
@@ -79,6 +99,7 @@ public class MainLoginController {
     }
 
     public void UserLoginOnAction(ActionEvent actionEvent) {
+        clearFields();
         btnUser.setDisable(true);
         selected=1;
         Btntch.setDisable(false);
@@ -91,6 +112,7 @@ public class MainLoginController {
     }
 
     public void TeacherLoginOnAction(ActionEvent actionEvent) {
+        clearFields();
         Btntch.setDisable(true);
         selected=2;
         btnUser.setDisable(false);
@@ -103,6 +125,7 @@ public class MainLoginController {
     }
 
     public void AdminLoginOnAction(ActionEvent actionEvent) {
+        clearFields();
         BtnAdmin.setDisable(true);
         selected=3;
         btnUser.setDisable(false);
